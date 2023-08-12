@@ -1,0 +1,39 @@
+doctype html
+head
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      title #{title}
+      //-  Bootstrap CSS 
+      link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" ,rel="stylesheet", integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9", crossorigin="anonymous")
+
+      //- Custom CSS
+      style 
+            include ../assets/css/style.css
+
+      //- Font
+      link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap", rel="stylesheet")
+body  
+      div.container-fluid
+      nav
+            div(class="top-border bg-primary shadow-bottom sticky-top shadow", style="height:50px; width: 100%")
+                  a(href="/login" class="text-white" style="margin-left:100px") Login 
+                  ul
+                        li
+                              a(href='') Home
+                        li
+                              a(href='') Product
+                        li
+                              a(href='') Services
+                        li
+                              a(href='') Gallery
+                        li
+                              a(href='') About
+                  div(class="menu-toggle ms-4")
+                        input(type='checkbox')
+                        span
+                        span
+                        span
+
+
+      script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' crossorigin='anonymous')
+      script(src="../assets/js/script.js") 

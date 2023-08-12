@@ -1,0 +1,125 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+    height: 100%;
+    width: 100%;
+}
+
+.brand-login{
+      background-image: url(img/login1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+}
+
+nav ul {
+    position: absolute;
+    list-style: none;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #b44ee8;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    z-index: -1;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s;
+}
+input{
+      border: none ;
+}
+
+/* nav ul {
+  /* display: flex; 
+  list-style: none;
+  justify-content: space-between;
+  width: 40%;
+} */
+
+nav ul li a {
+  color: #eac0ff;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+nav ul li a:hover {
+  color: rgb(250, 240, 255);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin-top: -12px;
+}
+
+.menu-toggle input {
+  position: absolute;
+  height: 28px;
+  width: 40px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: rgb(250, 240, 255);
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+  background-color: white;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+  background-color: white;
+}
+
+/* Responsive */
+/* @media screen and (max-width: 576px) { */
+
+  nav ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+/* } */
+
+
