@@ -2,7 +2,13 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const url = require('url')
-// const db = require('connection')
+// const database = require('./connection')
+const loginHandler = require('./login')
+const queryString = require('querystring')
+const user = {
+      'name': 'aldino',
+      'age': 19
+}
 
 // Setting up the view engine
 app.set('view engine', 'pug')
@@ -12,16 +18,18 @@ app.use(express.static(path.join(__dirname, 'assets')))
 // app.use(express.static('assets'))
 
 app.get('/', (req, res) => {
-      res.render('home', { user: 'Aldino' })
+      res.render('home')
 })
 
 app.get('/login', (req, res) => {
       // res.header('200')
-      res.render('login', { user: 'Aldino' })
+      res.render('login')
 })
 
 app.post('/login', (req, res) => {
-      console.log('login')
+      // res.setHeader('Content-Type', 'application/json')
+      let userFound = loginHandler('admin', 'admin')
+      res.render('home', { username: userFound[0].row.username })
 })
 
 // This is the http server port
