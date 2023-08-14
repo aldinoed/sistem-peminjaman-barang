@@ -15,8 +15,7 @@ function getUserData(uname, pass) {
 }
 
 getUserData('admin', 'admin')
-      // .then(result => { return result.rows[0].username })
-      .then(result => { console.log(result.rows[0].username) })
+      .then(result => { return result.rows[0].username })
       .catch(err => console.log(err))
 
-// module.exports = getUserData
+module.exports = getUserData
