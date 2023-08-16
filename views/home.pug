@@ -12,24 +12,24 @@ head
 
       //- Font
       link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap", rel="stylesheet")
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 body  
       div.container-fluid
       nav
             div(class="top-border bg-primary shadow-bottom sticky-top shadow d-flex justify-content-evenly", style="height:50px; width: 100%")
-                  div(class="right-bar ms-auto")
-                        a(href="/login" class="text-white" style="") Login 
+                  div(class="right-bar ms-auto d-flex me-4 align-items-center")
+                        span.material-symbols-outlined logout
+                        a(href="/login" class="text-white text-decoration-none" style="") Login 
                   //- p#{username}
-            ul(class="position-absolute start-0")
-                  li
-                        a(href='') Home
-                  li
-                        a(href='') Product
-                  li
-                        a(href='') Services
-                  li
-                        a(href='') Gallery
-                  li
-                        a(href='') About
+            ul(class="position-absolute d-flex justify-content-evenly align-self-center flex-column start-0 text-center")
+                  li.d-flex.align-items-center.justify-content-center
+                       h5 nama user dan role
+                  li.d-flex.align-items-center.justify-content-center.menuList
+                        a(href='',class="fs-6") Manajemen Peminjaman
+                  li.d-flex.align-items-center.justify-content-center.menuList
+                        a(href='',class="fs-6") Manajemen Peralatan
+                  li.d-flex.align-items-center.justify-content-center.menuList
+                        a(href='',class="fs-6") Manajemen Pengguna
             div(class="menu-toggle ms-5")
                   input(type='checkbox')
                   span

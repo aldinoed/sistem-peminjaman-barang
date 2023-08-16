@@ -10,38 +10,45 @@ body {
     height: 100%;
     width: 100%;
 }
-
+/* login */
 .brand-login{
       background-image: url(img/login1.png);
       background-size: contain;
       background-repeat: no-repeat;
 }
 
+/* home */
 nav ul {
     position: absolute;
     list-style: none;
     background-color: #353535;
     align-items: center;
-    width: 20%;
-    height: 80vh;
-    /* z-index: -1; */
-    justify-content: space-between;
-    transform: translateX(-100%);
-    /* opacity: 0; */
+    width: 25%;
+    height: 100vh;
+    transform: translateX(-80%);
+    padding: 0;
     transition: all 1s;
+    z-index: -1;
+    top: 0px;
 }
+
+nav ul li{
+      height: 17%;
+      width: 100%;
+}
+
 input{
       border: none ;
 }
 
 nav ul li a {
-  color: #eac0ff;
+  color: #c1c1c1;
   text-decoration: none;
   font-size: 0.8em;
 }
 
-nav ul li a:hover {
-  color: rgb(250, 240, 255);
+nav ul li.menuList:hover {
+  background-color: rgb(250, 240, 255);
 }
 
 /* Hamburger Menu */
@@ -101,7 +108,7 @@ nav ul li a:hover {
   background-color: white;
 }
 nav ul.slide {
-  transform: translateX(0);
+  transform: translateX(-9%);
   /* opacity: 1; */
 }
 
